@@ -1,0 +1,18 @@
+﻿@model tp3.Models.Produit
+@{
+    ViewBag.Title = "Display One Product";
+}
+<table class="table table-bordered table-hover" style="margin-top:100px">
+    <tr>
+        <td> Product ID </td>
+        <td> @Model.Id </td>
+    </tr>
+    <tr>
+        <td> Product Name </td>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <td> Product Price </td>
+        <td> @Model.Prix</td>
+    </tr>
+</table>

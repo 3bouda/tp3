@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Display Many Products";
+    var produits = ViewData["Produits"] as List<tp3.Models.Produit>;
+}
+
+<h2>Liste de Produits</h2>
+
+@if (produits != null)
+{
+    <ul>
+        @foreach (var produit in produits)
+        {
+            <li>
+                <h3>@produit.Name</h3>
+                <p>ID: @produit.Id</p>
+                <p>Prix: @produit.Prix</p>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Aucun produit disponible.</p>
+}
